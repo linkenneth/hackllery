@@ -11,6 +11,14 @@ App.ProjectBoardView = Backbone.View.extend({
   initialize: function(projectBoard) {
     this.collection = projectBoard;
     this.render();
+
+    // Pinterest/Masonry style brick layout
+    var that = this;
+    this.$el.imagesLoaded( function() {
+      this.masonry({
+	itemSelector: ".project"
+      });
+    });
   },
 
   el: $(".project-board"),

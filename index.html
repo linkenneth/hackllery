@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link href='css/open-sans.css' rel='stylesheet' type='text/css'/>
+    <link href='css/ubuntu.css' rel='stylesheet' type='text/css'/>
+      
   </head>
 
   <body>
@@ -14,29 +17,29 @@
     <!-- Navigation bar -->
     <div class="navbar navbar navbar-fixed-top">
       <div class="navbar-inner">
-	<a class="brand">Hackllery</a>
+	<a class="brand"><span class="orange">hack</span>llery</a>
       </div>
     </div>
 
     <!-- Projects -->
-    <div class="container">
-      <div class="project-board">
-	<!-- Projects rendered here -->
-      </div>
+    <div class="project-board">
+      <!-- Projects rendered here -->
     </div>
 
     <!-- Templates -->
     <script id="project-template" type="text/template">
-      <% console.log(this.template) %>
-      <% if (this.thumbnail) { %>
-        <p> has an image </p>
-      <% } %>
-      <p> <%= title %> </p>
+      <% if (this.model.get("thumbnail")) { %>
+        <img src="<%= this.model.get('thumbnail') %>"/>
+      <% }; %>
+      <h2> <%= title %> </h2>
+      <p> <%= description %> </p>
     </script>
 
     <!-- Javascript -->
     <!-- Libraries -->
     <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.masonry.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.imagesloaded.min.js"></script>
     <script type="text/javascript" src="js/lib/underscore-1.3.1.js"></script>
     <script type="text/javascript" src="js/lib/json2.js"></script>
     <script type="text/javascript" src="js/lib/backbone.js"></script>

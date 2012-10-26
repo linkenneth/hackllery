@@ -1,7 +1,61 @@
 /* === Body === */
 body {
     padding-top: 42px;
+    background: url(/home/link/lib/patterns/subtle-transparent-bgs/cubes.png),
+    -webkit-linear-gradient(top, rgba(255,255,255,0) 102px, rgba(255,255,255,0.6) 62%);
+    background-repeat: repeat, no-repeat;
+    background-color: orange;
+    font-family: "Ubuntu", sans-serif;
 }
 
 /* === Navigation bar === */
+.navbar-inner .brand {
+    font-family: "Ubuntu", sans-serif;
+    text-align: center;
+    width: 100%;
+    margin: 0px auto;
+    font-size: 40px;
+    line-height: 1.5;
+    padding: 0;
+}
+
+.orange {
+    color: orange;
+}
+
+/* === ProjectBoard === */
+.project-board {
+    margin-top: 40px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+/* === Project === */
+.project {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px;
+    width: 260px;
+    cursor: pointer;
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+}
+
+.project > h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.project > p {
+    font-size: 14px;
+    text-align: left;
+}
+
+.project > img {
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.8);
+}
 

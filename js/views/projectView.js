@@ -13,17 +13,21 @@ App.ProjectView = Backbone.View.extend({
 
   tagName: "div",
 
-  className: "project span3 well",
+  className: "project",
 
   template: _.template($("#project-template").html()),
 
   events: {
-    // "click div.project-container": "openModal"
+    "click div.project": "openModal"
   },
 
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
     return this;
+  },
+
+  openModal: function() {
+    console.log("openModal called");
   }
 
 });

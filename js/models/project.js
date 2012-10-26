@@ -12,9 +12,9 @@ App.Project = Backbone.Model.extend({
 
   defaults: {
     title: "",
-    authors: [],  // would this be difficult for single authors?
+    authors: [],
     link: "",
-    thumbnail: "",  // may want empty box
+    thumbnail: "img/placeholder.png",  // may want empty box
     quote: "",
     description: "",
     dateAdded: "",  // want number form?
@@ -28,7 +28,8 @@ App.Project = Backbone.Model.extend({
     // Number of times the link is clicked from the description page
     linkCount: 0,
     likes: 0,
-    dislikes: 0,
+    dislikes: 0,  // use?
+    comments: []
   }
 
 });
