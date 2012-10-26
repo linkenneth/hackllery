@@ -6,13 +6,13 @@
  *  subset of the Projects, possibly weighted by popularity.
  */
 
-App.ProjectBoard = Backbone.Collection.Extend({
+App.ProjectBoard = Backbone.Collection.extend({
 
   initialize: function() {
 
-  }
+  },
 
-  model: App.Project,
+  model: App.Project
 
 });
 

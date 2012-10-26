@@ -6,20 +6,23 @@
  *  popularity.
  */
 
-App.ProjectBoardView = Backbone.View.Extend({
+App.ProjectBoardView = Backbone.View.extend({
 
   initialize: function(projectBoard) {
     this.collection = projectBoard;
+    this.render();
   },
 
   el: $(".project-board"),
 
   events: {
 
-  }
+  },
 
   render: function() {
-    
+    _.each(this.collection.models, function(project) {
+      this.$el.append(new App.ProjectView({ model: project }).render().el);
+    }, this);
   }
 
 });

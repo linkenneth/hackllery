@@ -5,7 +5,7 @@
  *  ProjectModalView, also based off the Project model.
  */
 
-App.ProjectView = Backbone.View.Extend({
+App.ProjectView = Backbone.View.extend({
 
   initialize: function() {
 
@@ -22,7 +22,7 @@ App.ProjectView = Backbone.View.Extend({
   },
 
   render: function() {
-    this.$el.html(template(this.model.toJSON()));
+    this.$el.html(this.template(this.model.toJSON()));
     return this;
   }
 

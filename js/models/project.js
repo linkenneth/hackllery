@@ -4,17 +4,18 @@
  *  it's name, and a basic thumbnail.
  */
 
-App.Project = Backbone.Model.Extend({
+App.Project = Backbone.Model.extend({
 
   initialize: function() {
 
   },
 
   defaults: {
-    name: "",
-    authors: {},  // would this be difficult for single authors?
+    title: "",
+    authors: [],  // would this be difficult for single authors?
     link: "",
     thumbnail: "",  // may want empty box
+    quote: "",
     description: "",
     dateAdded: "",  // want number form?
     dateModified: "",

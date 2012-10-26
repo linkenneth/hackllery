@@ -12,18 +12,48 @@
   <body>
 
     <!-- Navigation bar -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<a class="brand">Hackllery</a>
+      </div>
     </div>
 
     <!-- Projects -->
-    <div class="project-board">
-      <!-- Projects rendered here -->
+    <div class="container">
+      <div class="project-board">
+	<!-- Projects rendered here -->
+      </div>
     </div>
+
+    <!-- Templates -->
     <script id="project-template" type="text/template">
+      <% console.log(this.template) %>
+      <% if (this.thumbnail) { %>
+        <p> has an image </p>
+      <% } %>
+      <p> <%= title %> </p>
     </script>
 
     <!-- Javascript -->
-    <script type="text/javascript" src="js/jquery></script>
+    <!-- Libraries -->
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/underscore-1.3.1.js"></script>
+    <script type="text/javascript" src="js/lib/json2.js"></script>
+    <script type="text/javascript" src="js/lib/backbone.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+
+    <!-- App -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/models/project.js"></script>
+    <script type="text/javascript" src="js/collections/projectBoard.js"></script>
+    <script type="text/javascript" src="js/views/projectView.js"></script>
+    <script type="text/javascript" src="js/views/projectBoardView.js"></script>
+    <script type="text/javascript" src="js/setup.js"></script>
+
+    <!-- Google analytics -->
+    <script type="text/javascript">
+      // to be added
+    </script>
 
   </body>
 
